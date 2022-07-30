@@ -2,6 +2,12 @@ view: covid19_open_data {
   sql_table_name: `Looker_publicdatasetcovid.covid19_open_data`
     ;;
 
+  dimension: location {
+    type: location
+    sql_latitude: ${latitude} ;;
+    sql_longitude: ${longitude} ;;
+  }
+
   dimension: adult_female_mortality_rate {
     type: string
     sql: ${TABLE}.adult_female_mortality_rate ;;
